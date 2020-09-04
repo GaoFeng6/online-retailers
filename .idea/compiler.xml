@@ -10,6 +10,7 @@
         <module name="gmall-bean" />
         <module name="gmall-common-util" />
         <module name="gmall-interface" />
+        <module name="gmall-order-web" />
         <module name="gmall-service-util" />
         <module name="gmall-user-manage" />
       </profile>
@@ -20,6 +21,7 @@
       <module name="gmall-common-util" target="1.7" />
       <module name="gmall-commonutil" target="1.7" />
       <module name="gmall-interface" target="1.7" />
+      <module name="gmall-order-web" target="1.7" />
       <module name="gmall-parent" target="1.7" />
       <module name="gmall-service-util" target="1.7" />
       <module name="gmall-user-manage" target="1.7" />
