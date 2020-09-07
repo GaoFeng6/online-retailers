@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0901小伙伴电商项目</title>
+    <script type="text/javascript" src="/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/easyui/easyloader.js"></script>
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css"  href="/easyui/themes/default/easyui.css">
+
+</head>
+<body class="easyui-layout">
+<div data-options="region:'north',title:'头部',split:true" style="height:100px;">
+    <h1> 0901 都是大神！ </h1>
+</div>
+<div data-options="region:'west',title:'左部',split:true" style="width:200px;">
+    <div class="easyui-accordion" style="overflow:auto;">
+        <div title="基本信息管理">
+            <!--平台属性连接-->
+            <ul class="nav">
+                <!--点击平台属性管理的时候，在中部显示出一个页面！add_tab(title,url)-->
+                <li><a href="javascript:add_tab('平台属性管理','attrListPage')" style="text-decoration:none;">平台属性管理</a></li>
+            </ul>
+        </div>
+        <div title="商品信息管理">
+            <h1>商品信息管理</h1>
+        </div>
+        <div title="广告管理">
+            <h1>广告管理</h1>
+        </div>
+    </div>
+</div>
+
+<div data-options="region:'center',title:'中部'"  >
+    <div id="tt" class="easyui-tabs" style="width:100%;height:100%;" >
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function add_tab(title,url) {
+        // 通过title 来控制在选项卡中，只能添加显示一次页面信息！
+        if ($("#tt").tabs('exists',title)){
+            $("#tt").tabs('select',title);
+        }else {
+            $("#tt").tabs('add',{
+                title:title,
+                href:url,
+                closable:true
+            });
+
+        }
+
+    }
+</script>
+
+</html>
